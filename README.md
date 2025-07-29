@@ -1,1 +1,1 @@
-# Patient-Triage-System
+This project implements an automated emergency room (ER) triage system that dynamically assigns patients to doctors based on medical priority and available resources. It simulates real-world ER operations by modeling how incoming patients are processed and prioritized depending on the set rules.
