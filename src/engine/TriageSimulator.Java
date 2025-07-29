@@ -14,6 +14,15 @@ public class TriageSimulator {
 
     // Tracking metrics
     private Map<String, Double> metrics;
+    public void runSimulation(List<Patient> patients) {
+        // Use PegaWorkflowSimulator to prioritize patients
+        List<Patient> prioritizedPatients = pegaSimulator.prioritizePatients(patients);
+
+        // Use prioritizedPatients for further triage processing
+        // ...
+
+        pegaSimulator.generateDashboardMetrics();
+    }
 
     public TriageSimulator(String inputFile, TriageRule rule) throws Exception {
         // Load patients from file
@@ -47,3 +56,4 @@ public class TriageSimulator {
 
     // Additional methods for metrics, patient states, etc. can be added here
 }
+
